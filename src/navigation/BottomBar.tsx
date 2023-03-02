@@ -119,7 +119,7 @@ const BottonBar = () => {
                             <View style={styles.tabView}>
                                 <Image source={require('../assets/video.png')}
                                     resizeMode='contain'
-                                    style={styles.imageStyles} />
+                                    style={styles.imageStyle} />
                                 <Text style={styles.textStyle}>videos </Text>
                             </View>
                         )
