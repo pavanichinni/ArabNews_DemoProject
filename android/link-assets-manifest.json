@@ -1,0 +1,81 @@
+{
+  "migIndex": 1,
+  "data": [
+    {
+      "path": "src/assets/Fonts/Isento-Bold.otf",
+      "sha1": "facad4d991636a7d2831aa5a7b1193d2c8ad15b7"
+    },
+    {
+      "path": "src/assets/Fonts/Isento-BoldItalic.otf",
+      "sha1": "491ad37e5adaedc73bfb47374ba63b8c9662b941"
+    },
+    {
+      "path": "src/assets/Fonts/Isento-Book.otf",
+      "sha1": "7f3cb94978816b21fd8a6d5618ec41887e3a0b11"
+    },
+    {
+      "path": "src/assets/Fonts/Isento-BookItalic.otf",
+      "sha1": "d7f9b017b1ff5986bcce753d59c8fdc8d4ff6b2f"
+    },
+    {
+      "path": "src/assets/Fonts/Isento-ExtraBold.otf",
+      "sha1": "220682d6aa67d4389efcc32837589b1a4ab68cf8"
+    },
+    {
+      "path": "src/assets/Fonts/Isento-ExtraBoldItalic.otf",
+      "sha1": "8e4ecf2a3f208d318d68c869f471a3ddcd8f4456"
+    },
+    {
+      "path": "src/assets/Fonts/Isento-Light.otf",
+      "sha1": "76a5c2103cd100599211474fd9343d8d41f773ba"
+    },
+    {
+      "path": "src/assets/Fonts/Isento-LightItalic.otf",
+      "sha1": "d8ba86d7e74c6e3213e13ea7b712bedd5cda3fb4"
+    },
+    {
+      "path": "src/assets/Fonts/Isento-Medium.otf",
+      "sha1": "d5873de348a0ca16a78db558d14a483e4245f79f"
+    },
+    {
+      "path": "src/assets/Fonts/Isento-MediumItalic.otf",
+      "sha1": "8cfe6d8cd5d9b2f90412be4bdb52a7a2ff61f6e6"
+    },
+    {
+      "path": "src/assets/Fonts/Isento-Thin.otf",
+      "sha1": "07ddae0e5cc0b0ed305b7dbe019dee014e78be60"
+    },
+    {
+      "path": "src/assets/Fonts/Isento-ThinItalic.otf",
+      "sha1": "b4e983eb39d6cebe63d8dde7e71d78bfd7b01ca2"
+    },
+    {
+      "path": "src/assets/Fonts/PlayfairDisplay-Black.ttf",
+      "sha1": "bfccbb9a4c46f3d3c30d245af74442e730d56723"
+    },
+    {
+      "path": "src/assets/Fonts/PlayfairDisplay-BlackItalic.ttf",
+      "sha1": "fa47f0f9a0be6d7f5b9cd731ae0acc941b86ed4f"
+    },
+    {
+      "path": "src/assets/Fonts/PlayfairDisplay-Bold.ttf",
+      "sha1": "a01693c7d32826d9626013a283d22748314a2157"
+    },
+    {
+      "path": "src/assets/Fonts/PlayfairDisplay-Italic.ttf",
+      "sha1": "a0c167b7600982961c56467c8dfe0bd6dd787743"
+    },
+    {
+      "path": "src/assets/Fonts/PlayfairDisplay-Medium.ttf",
+      "sha1": "d79552175bfa3a0c706e0a1a68c59148c5f24913"
+    },
+    {
+      "path": "src/assets/Fonts/PlayfairDisplay-Regular.ttf",
+      "sha1": "498c73c1c9ba334f4764af03435adc02ef3c5100"
+    },
+    {
+      "path": "src/assets/Fonts/PlayfairDisplay-SemiBold.ttf",
+      "sha1": "a2e44d97ebaa6a5465030d3c0b362aac281435b6"
+    }
+  ]
+}

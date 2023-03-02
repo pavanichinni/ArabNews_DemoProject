@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="32px" height="32px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>42FB5CBD-E0DD-498F-8F3A-34637440A217</title>
+    <defs>
+        <circle id="path-1" cx="16" cy="16" r="16"></circle>
+        <path d="M15.1065083,10.4243624 L5.69029157,16.7018402 C5.55399877,16.7925365 5.37886674,16.8009144 5.23453872,16.7236423 C5.0902107,16.6463702 5,16.495975 5,16.3322632 C5,8.07143402 5,3.88644882 5,3.77730762 C5,3.61359581 5.0902107,3.46320068 5.23453872,3.38592854 C5.37886674,3.30865639 5.55399877,3.31703429 5.69029157,3.40773066 C5.78115344,3.46819491 8.91989234,5.56068751 15.1065083,9.68520846 C15.2300656,9.76759622 15.3042783,9.90627897 15.3042783,10.0547854 C15.3042783,10.2032919 15.2300656,10.3419746 15.1065083,10.4243624 Z" id="path-3"></path>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="04A---Home" transform="translate(-136.000000, -2729.000000)">
+            <g id="Podcasts" transform="translate(16.000000, 2568.000000)">
+                <g id="Components-/-Cards-/-Podcast_card" transform="translate(0.000000, 41.000000)">
+                    <g id="ic_play_circle" transform="translate(120.000000, 120.000000)">
+                        <mask id="mask-2" fill="white">
+                            <use xlink:href="#path-1"></use>
+                        </mask>
+                        <g id="Mask"></g>
+                        <g id="Color-/-Black" opacity="0.5" mask="url(#mask-2)" fill="#000000">
+                            <rect id="color" x="0" y="0" width="32" height="32"></rect>
+                        </g>
+                        <g id="Icons-/-play" mask="url(#mask-2)">
+                            <g transform="translate(7.000000, 6.000000)" id="ic_play">
+                                <rect x="0" y="0" width="20" height="20"></rect>
+                                <mask id="mask-4" fill="white">
+                                    <use xlink:href="#path-3"></use>
+                                </mask>
+                                <use id="Mask" fill="#000000" fill-rule="nonzero" xlink:href="#path-3"></use>
+                                <g id="Color-/-Primary-Grey" mask="url(#mask-4)" fill="#FFFFFF">
+                                    <rect id="color" x="0" y="0" width="20" height="20"></rect>
+                                </g>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
