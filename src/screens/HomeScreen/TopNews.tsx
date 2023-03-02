@@ -7,6 +7,7 @@ import { COLORS } from '../../utilitis/Colors';
 import { formatDate, windowWidth } from '../../helper';
 import axios from 'axios'
 import { TOP_FOUR_NEWS, TOP_NEWS } from '../../utilitis/APIConstants';
+import { VIEWSTYLES } from '../../utilitis/Constants';
 
 
 
@@ -125,8 +126,8 @@ const styles = StyleSheet.create({
         width: windowWidth
     },
     titleMainView: {
-        flexDirection: 'row',
-        justifyContent: 'space-between',
+        flexDirection: VIEWSTYLES.ROW,
+        justifyContent: VIEWSTYLES.SPACEBETWEEN,
         marginBottom: 3,
         paddingLeft: 13
     },
@@ -135,7 +136,7 @@ const styles = StyleSheet.create({
 
     },
     scrollView: {
-        flexDirection: 'row'
+        flexDirection: VIEWSTYLES.ROW
     },
     textTitle: {
         fontSize: 16,
@@ -143,7 +144,7 @@ const styles = StyleSheet.create({
         textAlign: 'left',
         fontWeight: '600',
         fontFamily: 'PlayfairDisplay-Regular',
-        alignSelf: 'flex-start',
+        alignSelf: VIEWSTYLES.FLEXSTART,
         lineHeight: 21
 
     },

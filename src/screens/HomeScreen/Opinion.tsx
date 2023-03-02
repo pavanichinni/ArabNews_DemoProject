@@ -6,6 +6,7 @@ import Spacer from '../../components/spacer';
 import { formatDate } from '../../helper';
 import { OPINION } from '../../utilitis/APIConstants';
 import { COLORS } from '../../utilitis/Colors';
+import { VIEWSTYLES } from '../../utilitis/Constants';
 
 const Opinion = () => {
     const [opinion, setOpinion] = useState<any>()
@@ -89,8 +90,8 @@ const styles = StyleSheet.create({
         // paddingVertical: 8
     },
     mainView: {
-        flexDirection: 'row',
-        justifyContent: 'space-between'
+        flexDirection: VIEWSTYLES.ROW,
+        justifyContent: VIEWSTYLES.SPACEBETWEEN
     },
     imageStyle: {
         height: 60,
@@ -105,7 +106,7 @@ const styles = StyleSheet.create({
         borderBottomWidth: 0
     },
     subView: {
-        flexDirection: 'row'
+        flexDirection: VIEWSTYLES.ROW
     },
     author: {
         fontSize: 13,

@@ -9,6 +9,7 @@ import { COLORS } from '../utilitis/Colors';
 import { useRef } from 'react'
 import { Text, View, Image, StyleSheet, Animated, Platform } from 'react-native'
 import { windowWidth } from '../helper';
+import { VIEWSTYLES } from '../utilitis/Constants';
 const Tab = createBottomTabNavigator();
 
 const BottonBar = () => {
@@ -29,9 +30,9 @@ const BottonBar = () => {
                     width: '100%',
                     backgroundColor: COLORS.WHITE,
                     elevation: 8,
-                    alignItems: 'center',
-                    alignContent: 'center',
-                    justifyContent: 'center',
+                    alignItems: VIEWSTYLES.CENTER,
+                    alignContent: VIEWSTYLES.CENTER,
+                    justifyContent: VIEWSTYLES.CENTER,
                     borderWidth: 2,
                     borderTopColor: COLORS.WHITE
 
@@ -43,13 +44,10 @@ const BottonBar = () => {
                         tabBarShowLabel: false,
                         headerShown: false,
                         tabBarIcon: ({ focused }) => (
-                            <View style={{ alignItems: 'center', justifyContent: 'center', top: Platform.OS === 'IOS' ? '20%' : 0 }}>
+                            <View style={styles.tabView}>
                                 <Image source={require('../assets/ic_home.png')}
                                     resizeMode='contain'
-                                    style={{
-                                        width: 24,
-                                        height: 24,
-                                    }} />
+                                    style={styles.imageStyle} />
                                 <Text style={styles.textStyle}>Home </Text>
                             </View>
                         )
@@ -64,13 +62,10 @@ const BottonBar = () => {
                 < Tab.Screen name="Trending" component={Trending}
                     options={{
                         tabBarIcon: ({ focused }) => (
-                            <View style={{ alignItems: 'center', justifyContent: 'center', top: Platform.OS === 'IOS' ? '20%' : 0 }}>
+                            <View style={styles.tabView}>
                                 <Image source={require('../assets/Trending.png')}
                                     resizeMode='contain'
-                                    style={{
-                                        width: 24,
-                                        height: 24,
-                                    }} />
+                                    style={styles.imageStyle} />
                                 <Text style={styles.textStyle}>Trending </Text>
                             </View>
                         )
@@ -85,13 +80,10 @@ const BottonBar = () => {
                 < Tab.Screen name="BookMarks" component={BookMarks}
                     options={{
                         tabBarIcon: ({ focused }) => (
-                            <View style={{ alignItems: 'center', justifyContent: 'center', top: Platform.OS === 'IOS' ? '20%' : 0 }}>
+                            <View style={styles.tabView}>
                                 <Image source={require('../assets/bookmark.png')}
                                     resizeMode='contain'
-                                    style={{
-                                        width: 24,
-                                        height: 24,
-                                    }} />
+                                    style={styles.imageStyle} />
                                 <Text style={styles.textStyle}>BookMarks </Text>
                             </View>
                         )
@@ -106,13 +98,10 @@ const BottonBar = () => {
                 < Tab.Screen name="Podcast" component={Podcasts}
                     options={{
                         tabBarIcon: ({ focused }) => (
-                            <View style={{ alignItems: 'center', justifyContent: 'center', top: Platform.OS === 'IOS' ? '20%' : 0 }}>
+                            <View style={styles.tabView}>
                                 <Image source={require('../assets/podcast.png')}
                                     resizeMode='contain'
-                                    style={{
-                                        width: 24,
-                                        height: 24,
-                                    }} />
+                                    style={styles.imageStyle} />
                                 <Text style={styles.textStyle}>Podcast </Text>
                             </View>
                         )
@@ -127,14 +116,10 @@ const BottonBar = () => {
                 < Tab.Screen name="Videos" component={Videos}
                     options={{
                         tabBarIcon: ({ focused }) => (
-                            <View style={{ alignItems: 'center', justifyContent: 'center', top: Platform.OS === 'IOS' ? '20%' : 0 }}>
+                            <View style={styles.tabView}>
                                 <Image source={require('../assets/video.png')}
                                     resizeMode='contain'
-                                    style={{
-                                        width: 24,
-                                        height: 24,
-
-                                    }} />
+                                    style={styles.imageStyles} />
                                 <Text style={styles.textStyle}>videos </Text>
                             </View>
                         )
@@ -167,6 +152,16 @@ const styles = StyleSheet.create({
         color: COLORS.PRIMARY_GRAY,
         // fontFamily: FONTS.FONT_MEDIUM
 
-    }
+    },
+    tabView: {
+        alignItems: VIEWSTYLES.CENTER,
+        justifyContent: VIEWSTYLES.CENTER,
+        top: Platform.OS === 'IOS' ? '20%' : 0
+    },
+    imageStyle: {
+        width: 24,
+        height: 24,
+
+    },
 })
 export default BottonBar;

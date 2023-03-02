@@ -27,7 +27,7 @@ const styles = StyleSheet.create({
 
     InActivetitle: {
         fontSize: 14,
-        textAlign: 'center',
+        textAlign: VIEWSTYLES.CENTER,
         color: COLORS.INACTIVE_TITLE,
         fontFamily: 'Isento Medium',
         lineHeight: 17,

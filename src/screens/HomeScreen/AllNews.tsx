@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { ScrollView, StyleSheet, View } from 'react-native';
 import TabButton from '../../components/TabButton';
+import { VIEWSTYLES } from '../../utilitis/Constants';
 
 
 const ALlNews = ['AllNews', 'Saudi Arabia', 'MiddleEast', 'World', 'Business&Economy', 'Sport', 'Lifestyle', 'Media', 'Photos', 'Videos']
@@ -41,7 +42,7 @@ const styles = StyleSheet.create({
         margin: 16
     },
     subContainer: {
-        flexDirection: 'row'
+        flexDirection: VIEWSTYLES.ROW
     }
 })
 

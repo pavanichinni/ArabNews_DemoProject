@@ -6,6 +6,7 @@ import Loader from '../../components/Loader';
 import Spacer from '../../components/spacer';
 import { PODCAST } from '../../utilitis/APIConstants';
 import { COLORS } from '../../utilitis/Colors';
+import { VIEWSTYLES } from '../../utilitis/Constants';
 
 const Podcast = () => {
 
@@ -94,7 +95,7 @@ const styles = StyleSheet.create({
         height: 32,
         width: 32,
         bottom: '43%',
-        alignSelf: 'flex-end',
+        alignSelf: VIEWSTYLES.FLEXEND,
         right: 10
     }
 })

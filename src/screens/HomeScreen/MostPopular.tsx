@@ -6,6 +6,7 @@ import TabButton from '../../components/TabButton';
 import { formatDate } from '../../helper';
 import { MOST_READ_DAY, MOST_READ_MONTH, MOST_READ_WEEK, MOST_SHARED_DAY, MOST_SHARED_MONTH, MOST_SHARED_WEEK } from '../../utilitis/APIConstants';
 import { COLORS } from '../../utilitis/Colors';
+import { VIEWSTYLES } from '../../utilitis/Constants';
 
 
 const MostPopular = () => {
@@ -188,8 +189,8 @@ const styles = StyleSheet.create({
         marginRight: 10
     },
     renderView: {
-        flexDirection: 'row',
-        alignItems: 'center',
+        flexDirection: VIEWSTYLES.ROW,
+        alignItems: VIEWSTYLES.CENTER,
         padding: 10,
     },
     renderWidth: {
@@ -232,23 +233,23 @@ const styles = StyleSheet.create({
     },
     activeTextStyle: {
         color: "#D85229",
-        textAlign: "center",
+        textAlign: VIEWSTYLES.CENTER,
         fontFamily: 'Isento Medium',
         fontSize: 14
     },
     inActiveTextStyle: {
         color: "#000",
-        textAlign: "center",
+        textAlign: VIEWSTYLES.CENTER,
         fontFamily: 'Isento Medium',
         fontSize: 14
     },
     subContainer: {
-        flexDirection: 'row',
-        justifyContent: 'space-evenly'
+        flexDirection: VIEWSTYLES.ROW,
+        justifyContent: VIEWSTYLES.SPACEEVENLY
 
     },
     container: {
-        flexDirection: 'row',
+        flexDirection: VIEWSTYLES.ROW,
         marginBottom: 10,
     },
     authorStyle: {

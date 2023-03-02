@@ -8,6 +8,7 @@ import Spacer from '../../components/spacer';
 import { formatDate, windowWidth } from '../../helper';
 import { TOP_TRENDING } from '../../utilitis/APIConstants';
 import { COLORS } from '../../utilitis/Colors';
+import { VIEWSTYLES } from '../../utilitis/Constants';
 
 const TopTrending = () => {
 
@@ -46,7 +47,7 @@ const TopTrending = () => {
                         <View>
                             <Image
                                 source={require('../../assets/ic_bookmark_White.png')}
-                                style={styles.imageStyle} />
+                                style={styles.imageStyle1} />
                         </View>
                     </View>
                 </View>
@@ -85,18 +86,18 @@ const styles = StyleSheet.create({
         flex: 1
     },
     subView: {
-        flexDirection: 'row'
+        flexDirection: VIEWSTYLES.ROW
     },
     subContainer: {
         height: 255,
         backgroundColor: COLORS.WHITE,
         paddingTop: 10
     },
-    imageStyle: {
+    imageStyle1: {
         height: 20,
         width: 20,
         bottom: 160,
-        alignSelf: 'flex-end',
+        alignSelf: VIEWSTYLES.FLEXEND,
         right: 10
     },
     title: {

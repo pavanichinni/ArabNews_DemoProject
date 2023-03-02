@@ -7,6 +7,7 @@ import Spacer from '../../components/spacer';
 import { formatDate } from '../../helper';
 import { SAUDIARABIA } from '../../utilitis/APIConstants';
 import { COLORS } from '../../utilitis/Colors';
+import { VIEWSTYLES } from '../../utilitis/Constants';
 
 const SaudiArabia = () => {
 
@@ -69,8 +70,8 @@ const styles = StyleSheet.create({
         margin: 16
     },
     titleContainer: {
-        flexDirection: 'row',
-        justifyContent: 'space-between'
+        flexDirection: VIEWSTYLES.ROW,
+        justifyContent: VIEWSTYLES.SPACEBETWEEN
     },
     title: {
         fontSize: 20,
@@ -120,16 +121,16 @@ const styles = StyleSheet.create({
     },
     subView: {
         flex: 1,
-        flexDirection: "row"
+        flexDirection: VIEWSTYLES.ROW
     },
     flexView: {
-        flexDirection: "column",
+        flexDirection: VIEWSTYLES.COLUMN,
         padding: 10
     },
     flexView1: {
-        flexDirection: "row",
+        flexDirection: VIEWSTYLES.ROW,
         padding: 10,
-        alignContent: 'center',
+        alignContent: VIEWSTYLES.CENTER,
 
     },
     borderWidth: {

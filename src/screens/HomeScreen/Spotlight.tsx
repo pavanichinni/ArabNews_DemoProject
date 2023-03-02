@@ -7,6 +7,7 @@ import Spacer from '../../components/spacer';
 import { formatDate } from '../../helper';
 import { SPOT_LIGHT } from '../../utilitis/APIConstants';
 import { COLORS } from '../../utilitis/Colors';
+import { VIEWSTYLES } from '../../utilitis/Constants';
 
 
 const SpotLight = () => {
@@ -91,12 +92,12 @@ const styles = StyleSheet.create({
         margin: 16
     },
     titleContainer: {
-        flexDirection: 'row',
-        justifyContent: 'space-between'
+        flexDirection: VIEWSTYLES.ROW,
+        justifyContent: VIEWSTYLES.SPACEBETWEEN
     },
     subContainer: {
         flex: 1,
-        flexDirection: "row"
+        flexDirection: VIEWSTYLES.ROW
     },
     subTitle: {
         fontSize: 16,
@@ -151,13 +152,13 @@ const styles = StyleSheet.create({
         flex: 1
     },
     flexView: {
-        flexDirection: "column",
+        flexDirection: VIEWSTYLES.COLUMN,
         padding: 10
     },
     flexView1: {
-        flexDirection: "row",
+        flexDirection: VIEWSTYLES.ROW,
         padding: 10,
-        alignContent: 'center',
+        alignContent: VIEWSTYLES.CENTER,
 
     },
     borderWidth: {
