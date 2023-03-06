@@ -8,6 +8,7 @@ import { formatDate, windowWidth } from '../../helper';
 import axios from 'axios'
 import { TOP_FOUR_NEWS, TOP_NEWS } from '../../utilitis/APIConstants';
 import { VIEWSTYLES } from '../../utilitis/Constants';
+import Swiper from '../../components/Swiper';
 
 
 
@@ -15,7 +16,7 @@ const TopNews = () => {
 
     const [topNews, setDatatopNews] = useState([])
     const [topFourNews, setTopFourNews] = useState([])
-    const [loading, setLoading] = useState(true);
+    const [swiperData, setSwiperData] = useState<any>([]);
     const topNewsAPi = async () => {
         const header = {};
         const gettopNewsData = axios.get(TOP_NEWS, header)
@@ -44,76 +45,80 @@ const TopNews = () => {
     useEffect(() => {
         topNewsAPi()
     }, [])
-    const renderItem = (item: any) => {
+
+    useEffect(() => {
+        if (topNews && topFourNews && topNews.length && topFourNews.length > 0) {
+            const dta2 = topFourNews.map((dta) => {
+                return {
+                    type: 'comp',
+                    component: () => swiperSlide2(dta)
+                }
+            })
+            const dta1 = [{
+                type: "comp", component: () => swipeSlide1(topNews)
+            }
+            ]
+            setSwiperData(
+                dta1.concat(dta2)
+            )
+
+        }
+    }, [topFourNews, topNews])
+
+    const swiperSlide2 = (item: any) => {
+
         return (
-            <View style={styles.mainView}>
-                <View >
+            <View style={styles.mainView} key={item?.id}>
+                <View>
                     <FastImage
                         resizeMode={FastImage.resizeMode.stretch}
-                        source={{ uri: item.item.main_image }}
+                        source={{ uri: item?.main_image }}
                         style={styles.imageStyle} />
                 </View>
                 <Spacer space={5} />
                 <View style={styles.titleMainView}>
                     <View style={styles.titleSubView}>
-                        <Text style={styles.textTitle}> {item?.item?.title}</Text>
+                        <Text numberOfLines={2} style={styles.textTitle}> {item?.title}</Text>
                         <Spacer space={2} />
-                        <Text style={styles.subText}>BY {item?.item?.author}<Text style={styles.subText}>. {formatDate(item?.item?.publicationDate)} </Text></Text>
+                        <Text style={styles.subText}>{item?.author}<Text style={styles.subText}> {formatDate(item?.publicationDate)} </Text></Text>
                     </View>
                     <View style={styles.iconView}>
                         <Image source={require('../../assets/bookmark.png')} />
                     </View>
-
                 </View>
+            </View>
+        )
+    }
 
+    const swipeSlide1 = (item: any) => {
+        return (
+            <View style={styles.mainView}>
+                <View >
+                    <FastImage
+                        resizeMode={FastImage.resizeMode.stretch}
+                        source={{ uri: item[0]?.main_image }}
+                        style={styles.imageStyle} />
+                </View>
+                <Spacer space={5} />
+                <View style={styles.titleMainView}>
+                    <View style={styles.titleSubView}>
+                        <Text style={styles.textTitle}> {item[0]?.title}</Text>
+                        <Spacer space={2} />
+                        <Text style={styles.subText}>BY {item[0]?.author}<Text style={styles.subText}>. {formatDate(item[0]?.publicationDate)} </Text></Text>
+                    </View>
+                    <View style={styles.iconView}>
+                        <Image source={require('../../assets/bookmark.png')} />
+                    </View>
+                </View>
             </View>
         )
     }
 
     return (
-
-        <ScrollView style={styles.scrollView}
-            horizontal
-            showsHorizontalScrollIndicator={false}
-            scrollEventThrottle={200} >
-            <FlatList
-                showsHorizontalScrollIndicator={false}
-                style={styles.container}
-                data={topNews}
-                horizontal={true}
-                renderItem={renderItem}
-                keyExtractor={(item, index) => index.toString()}
-            />
-
-            <View style={styles.scrollView}>
-                {
-                    topFourNews && topFourNews.length > 0 && topFourNews.map((item, index) => {
-                        return (
-                            <View style={{ marginLeft: 10 }} key={item?.id}>
-                                <View>
-                                    <FastImage
-                                        resizeMode={FastImage.resizeMode.stretch}
-                                        source={{ uri: item?.main_image }}
-                                        style={styles.imageStyle} />
-                                </View>
-                                <Spacer space={5} />
-                                <View style={styles.titleMainView}>
-                                    <View style={styles.titleSubView}>
-                                        <Text numberOfLines={2} style={styles.textTitle}> {item?.title}</Text>
-                                        <Spacer space={2} />
-                                        <Text style={styles.subText}>{item?.author}<Text style={styles.subText}> {formatDate(item?.publicationDate)} </Text></Text>
-                                    </View>
-                                    <View style={styles.iconView}>
-                                        <Image source={require('../../assets/bookmark.png')} />
-                                    </View>
-                                </View>
-                            </View>
-                        )
-                    })
-                }
-            </View>
-
-        </ScrollView >)
+        <View>
+            {swiperData && swiperData.length > 0 && <Swiper data={swiperData} />}
+        </View>
+    )
 }
 
 
